@@ -1,24 +1,131 @@
-.App {
-  text-align: center;
+h1 {
+  margin-bottom: 30px;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+hr {
+  border-top: 2px solid #000;
 }
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.overlay_title {
+  position: relative;
+  font-weight: bold;
+  font-size: 24px;
+  top:-15px;
 }
-
-.App-intro {
-  font-size: large;
+.edit_user_overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: #000;
+  opacity: 0.7;
+  z-index: 5;
 }
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.inner_overlay {
+  min-width: 350px;
+  padding: 25px;
+  background: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 10;
+}
+.close_x {
+  float: right;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  position: relative;
+  top: -15px;
+  right: -15px;
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+  opacity: 0;
+}
+.slide-enter-active, .slide-leave-active {
+  transition: all .5s ease;
+}
+.slide-enter, .slide-leave-to /* .fade-leave-active in <2.1.8 */ {
+  transform: translateX(-175px) translateY(-400px);
+  opacity: 0;
+}
+@media only screen
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: portrait) {
+  .user_name {
+    display: block;
+  }
+}
+.warning {
+  color: red;
+}
+.dept_list_wrapper {
+  margin: 10px 0 40px 0;
+}
+legend {
+  width: auto;
+  margin: 0;
+  border: none;
+  padding: 0 5px;
+  font-weight: bold;
+}
+fieldset {
+  min-width: none;
+  padding: 10px;
+  margin: 0;
+  border: #999 solid 1px;
+}
+.add_user_wrapper {
+  box-sizing: border-box;
+  padding: 20px 0 0 0;
+  text-align: right;
+}
+.edit,
+.delete_user {
+  cursor: pointer;
+  font-size: 12px;
+}
+.edit:hover,
+.delete_user:hover {
+  text-decoration: underline;
+}
+.edit {
+  color: blue;
+}
+.delete_user {
+  color: red;
+}
+.errors {
+  color: red;
+}
+.dept_list {
+  list-style: none;
+  padding: 0;
+}
+.dept_list li {
+  background: #fff;
+  box-sizing: border-box;
+  padding:5px 10px;
+  overflow: hidden;
+  font-size: 18px;
+}
+.dept_name {
+  vertical-align: text-top;
+}
+.dept_list li:nth-child(odd) {
+  background: #F0F0F0;
+}
+.delete {
+  float: right;
+}
+.add_dept {
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 0 0 10px 0;
+  text-align: right;
 }
